@@ -1,0 +1,27 @@
+Pod::Spec.new do |spec|
+
+  spec.name = "PointHomeUnityBridge"
+  spec.version = "1.0.0"
+  spec.summary = "Avatye pointhome IOS-Unity bridge"
+
+  spec.description = <<-DESC
+  Avatye pointhome IOS-Unity bridge.(SDK)
+  DESC
+
+  spec.homepage = "https://github.com/avatye/pointhome-ios-unity-bridge-sdk"
+  spec.license = {:type => "MIT", :text => "Copyright (c) 2024 Avatye Corp."}
+  spec.author = {"YoungSue" => "yspark@avatye.com"}
+
+  spec.source = {:git => "https://github.com/avatye/pointhome-ios-unity-bridge-sdk.git", :tag => spec.version.to_s}
+
+  spec.ios.deployment_target = "13.0"
+
+  spec.swift_versions = ["5.0"]
+
+  spec.source_files = "PointHomeUnityBridge/**/*.{h,m,mm,swift}"
+  spec.public_header_files = "PointHomeUnityBridge/**/*.h"
+
+
+  # spec.dependency("AdCashFramework", "3.1.24")
+  spec.dependency("AvatyePointHome", "1.8.2")
+end
