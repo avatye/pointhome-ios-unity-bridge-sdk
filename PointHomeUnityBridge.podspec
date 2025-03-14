@@ -37,7 +37,7 @@ Pod::Spec.new do |spec|
   spec.dependency("UnityAds", unity_ads_version)
   spec.dependency("VungleAds", vungle_ads_version)
   spec.dependency("FBAudienceNetwork", fb_audience_network_version)
-  spec.dependency 'CaulySDK', :git => 'https://github.com/cauly/CaulySDK_iOS.git', :tag => cauly_sdk_version
+  spec.dependency("CaulySDK", cauly_sdk_version)
 
   # Core 모듈 정의: AvatyePointHome 의존성 추가
   spec.subspec 'Core' do |core|
@@ -51,7 +51,7 @@ Pod::Spec.new do |spec|
     ads.dependency 'UnityAds', unity_ads_version
     ads.dependency 'VungleAds', vungle_ads_version
     ads.dependency 'FBAudienceNetwork', fb_audience_network_version
-    ads.dependency 'CaulySDK', :git => 'https://github.com/cauly/CaulySDK_iOS.git', :tag => cauly_sdk_version
+    ads.dependency 'CaulySDK', cauly_sdk_version
   end
 
   # 각 광고 SDK별 서브스펙 정의
@@ -82,7 +82,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Cauly' do |cauly|
-    cauly.dependency 'CaulySDK', :git => 'https://github.com/cauly/CaulySDK_iOS.git', :tag => cauly_sdk_version
+    cauly.dependency 'CaulySDK', cauly_sdk_version
     # cauly.source_files = 'PointHomeUnityBridge/Adapters/Cauly/*.{h,m,swift}'
   end
 
