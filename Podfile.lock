@@ -1,24 +1,92 @@
 PODS:
   - AdPopcornSSP (2.9.3)
+  - Ads-Global (6.2.0.5):
+    - Ads-Global/BUAdSDK (= 6.2.0.5)
+  - Ads-Global/BUAdSDK (6.2.0.5):
+    - Ads-Global/Dep_Accurate
+  - Ads-Global/Dep_Accurate (6.2.0.5):
+    - BURelyFoundation_Global/Pangle (= 1.0.0.6)
+  - AppLovinSDK (13.0.1)
   - AvatyeAdCash (3.1.24):
     - AdPopcornSSP (~> 2.9.1)
   - AvatyePointHome (1.8.2):
     - AvatyeAdCash (~> 3.1.24)
+  - BURelyFoundation_Global/AFNetworking (1.0.0.6)
+  - BURelyFoundation_Global/APM (1.0.0.6)
+  - BURelyFoundation_Global/Foundation (1.0.0.6):
+    - BURelyFoundation_Global/NETWork
+  - BURelyFoundation_Global/Gecko (1.0.0.6):
+    - BURelyFoundation_Global/Foundation
+  - BURelyFoundation_Global/Header (1.0.0.6)
+  - BURelyFoundation_Global/NETWork (1.0.0.6):
+    - BURelyFoundation_Global/AFNetworking
+  - BURelyFoundation_Global/Pangle (1.0.0.6):
+    - BURelyFoundation_Global/AFNetworking
+    - BURelyFoundation_Global/APM
+    - BURelyFoundation_Global/Foundation
+    - BURelyFoundation_Global/Gecko
+    - BURelyFoundation_Global/Header
+    - BURelyFoundation_Global/NETWork
+    - BURelyFoundation_Global/SDWebImage
+    - BURelyFoundation_Global/YYModel
+    - BURelyFoundation_Global/ZFPlayer
+    - BURelyFoundation_Global/Zip
+  - BURelyFoundation_Global/SDWebImage (1.0.0.6):
+    - BURelyFoundation_Global/Foundation
+  - BURelyFoundation_Global/YYModel (1.0.0.6)
+  - BURelyFoundation_Global/ZFPlayer (1.0.0.6):
+    - BURelyFoundation_Global/Foundation
+    - BURelyFoundation_Global/Zip
+  - BURelyFoundation_Global/Zip (1.0.0.6):
+    - BURelyFoundation_Global/Foundation
+  - CaulySDK (3.1.22)
+  - FBAudienceNetwork (6.14.0)
+  - UnityAds (4.12.5)
+  - VungleAds (7.4.1)
 
 DEPENDENCIES:
+  - Ads-Global (= 6.2.0.5)
+  - AppLovinSDK (= 13.0.1)
   - AvatyePointHome (= 1.8.2)
+  - CaulySDK (from `https://github.com/cauly/CaulySDK_iOS.git`, tag `3.1.22`)
+  - FBAudienceNetwork (= 6.14.0)
+  - UnityAds (= 4.12.5)
+  - VungleAds (= 7.4.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdPopcornSSP
+    - Ads-Global
+    - AppLovinSDK
     - AvatyeAdCash
     - AvatyePointHome
+    - BURelyFoundation_Global
+    - FBAudienceNetwork
+    - UnityAds
+    - VungleAds
+
+EXTERNAL SOURCES:
+  CaulySDK:
+    :git: https://github.com/cauly/CaulySDK_iOS.git
+    :tag: 3.1.22
+
+CHECKOUT OPTIONS:
+  CaulySDK:
+    :git: https://github.com/cauly/CaulySDK_iOS.git
+    :tag: 3.1.22
 
 SPEC CHECKSUMS:
   AdPopcornSSP: 1c428770117349687464548404de64e43198164f
+  Ads-Global: 7da585d796df191827a52c1ea4a754e0425d8e11
+  AppLovinSDK: fdae6a4361c9c9b09f8d7d18ede792368221d987
   AvatyeAdCash: cc993934ded1610f4b3d64d93f53c042075f7cca
   AvatyePointHome: d4bba8e1d858ca04934516f3f590c4e47b2281a8
+  BURelyFoundation_Global: 17faee76affe097bd20b422fe829f9f90ed10e25
+  CaulySDK: 2799452c9923a7e00d145ff9d3f35c4c79bf992d
+  FBAudienceNetwork: 4d6223a9a88a22e9dca8c9e6c1829a8745b86228
+  UnityAds: a4036ed911b4df2227d8137f4f777fcb86c4a2df
+  VungleAds: 97140121d0b909891eb217d1c102a194601da607
 
-PODFILE CHECKSUM: f6497213698780a5b71fc36695304d0a25423260
+PODFILE CHECKSUM: 6e6cbc0db8e0ef0a0030d33149dd40a36b151eac
 
 COCOAPODS: 1.16.2

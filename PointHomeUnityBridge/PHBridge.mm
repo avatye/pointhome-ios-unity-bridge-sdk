@@ -48,4 +48,25 @@ extern "C" {
        NSLog(@"OpenPH called");
        [PHBridgeKit open];
    }
+
+
+    void InitializeApplovin(const char* jsonParams) {
+        NSString* params = [NSString stringWithUTF8String:jsonParams];
+        NSLog(@"InitializeApplovin called with params: %@", params);
+        [PHBridgeKit initializeApplovin:params];
+    }
+
+    
+    void InitializePangle(const char* jsonParams) {
+        NSString* params = [NSString stringWithUTF8String:jsonParams];
+        NSLog(@"InitializePangle called with params: %@", params);
+        [PHBridgeKit initializePangle:params];
+    }
+
+    void InitializeVungle(const char* jsonParams) {
+        NSString* params = [NSString stringWithUTF8String:jsonParams];
+        NSLog(@"InitializeVungle called with params: %@", params);
+        [PHBridgeKit initializeVungle:params];
+    }
+
 }

@@ -9,6 +9,9 @@
 + (void)initialize:(NSString *)params initListener:(void (^)(NSNumber *success, NSString *message))initListener;
 + (void)makeBuilder:(NSString *)params;
 + (void)open;
++ (void)initializeApplovin:(NSString *)params;
++ (void)initializePangle:(NSString *)params;
++ (void)initializeVungle:(NSString *)params;
 @end
 
 

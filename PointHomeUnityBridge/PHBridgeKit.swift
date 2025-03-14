@@ -6,6 +6,9 @@
 import Foundation
 import AvatyePointHome
 import UIKit
+import AppLovinSDK
+import PAGAdSDK
+import VungleAdsSDK
 
 @objc public class PHBridgeKit: NSObject, AvatyePHDelegate {
     
@@ -50,21 +53,18 @@ import UIKit
            
            guard let appId = jsonObject["appID"] as? String,
                  let appSecret = jsonObject["appSecret"] as? String,
-//                 let userKey = jsonObject["userKey"] as? String,
                  let openKey = jsonObject["openKey"] as? String,
                  let fullScreen = jsonObject["fullScreen"] as? Bool else {
                print("PHBridgeKit.swift -> makeBuilder::Error: There is no json value!!")
                return
            }
-        
-        // userKey가 빈 문자열이면 nil로 처리
          let userKey: String? = {
              if let key = jsonObject["userKey"] as? String, !key.isEmpty {
                  return key
              }
              return nil
          }()
-        print("PHBridgeKit.swift -> userKey::   \(userKey)")
+        print("PHBridgeKit.swift -> userKey::   \(userKey ?? "nil")")
            
         // ios 13
 //           guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
@@ -114,6 +114,8 @@ import UIKit
                print("success \(t)")
            case .failure(let error):
                print("failure \(error)")
+           @unknown default:
+               print("Unknown result")
            }
        }
    }
@@ -137,6 +139,87 @@ import UIKit
     // 포인트홈 슬라이더 closed 이벤트
     public func pointHomeSliderClosed(caller: String) {
         print("PHBridgeKit.swift => pointHomeSliderClosed \(caller)")
+    }
+    
+    
+    
+    // 미디에이션 초기화 추가
+    @objc public static func initializeApplovin(_ params: NSString) {
+        print("PHBridgeKit.swift -> initializeAppLovin::    \(params)")
+                   
+           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
+                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
+               print("PHBridgeKit.swift => initializeAppLovin -> Error: Failed to parse JSON")
+               return
+           }
+           
+           guard let applovinKey = jsonObject["applovinKey"] as? String else {
+               print("PHBridgeKit.swift -> initializeAppLovin::Error: There is no json value!!")
+               return
+           }
+        
+        
+        let initConfig = ALSdkInitializationConfiguration(sdkKey: applovinKey) { builder in
+            builder.mediationProvider = ALMediationProviderMAX
+        }
+        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
+            print("PHBridgeKit.swift -> initializeAppLovin::{ AppLovin SDK initialized with success: \(sdkConfig) }")
+        }
+    }
+
+    @objc public static func initializePangle(_ params: NSString) {
+        print("PHBridgeKit.swift -> initializePangle::    \(params)")
+                   
+           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
+                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
+               print("PHBridgeKit.swift => initializePangle -> Error: Failed to parse JSON")
+               return
+           }
+           
+           guard let pangleKey = jsonObject["pangleKey"] as? String else {
+               print("PHBridgeKit.swift -> initializePangle::Error: There is no json value!!")
+               return
+           }
+        
+        let config = PAGConfig.share()
+        config.appID = pangleKey
+        PAGSdk.start(with: config) { pSuccess, error in
+            if pSuccess {
+                print("PHBridgeKit.swift -> initializePangle:: { PAG Success }")
+            } else {
+                print("PHBridgeKit.swift -> initializePangle:: { PAG Error: \(error?.localizedDescription ?? "Unknown error }")")
+            }
+        }
+    }
+
+    @objc public static func initializeVungle(_ params: NSString) {
+        print("PHBridgeKit.swift -> initializeVungle::    \(params)")
+                   
+           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
+                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
+               print("PHBridgeKit.swift => initializeVungle -> Error: Failed to parse JSON")
+               return
+           }
+           
+           guard let vungleKey = jsonObject["vungleKey"] as? String else {
+               print("PHBridgeKit.swift -> initializeVungle::Error: There is no json value!!")
+               return
+           }
+        
+        
+        VungleAds.initWithAppId(vungleKey) { error in
+            if let error = error {
+                print("PHBridgeKit.swift -> initializeVungle:: { Vungle initialization failed with error: \(error.localizedDescription) }")
+            } else {
+                print("PHBridgeKit.swift -> initializeVungle:: { Vungle initialization success }")
+            }
+        }
+        
+        if VungleAds.isInitialized() {
+            print("PHBridgeKit.swift -> initializeVungle:: { Vungle SDK is initialized } ")
+        } else {
+            print("PHBridgeKit.swift -> initializeVungle:: { Vungle SDK is Not initialized }")
+        }
     }
 
 }
