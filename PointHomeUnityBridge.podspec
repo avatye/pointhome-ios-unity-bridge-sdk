@@ -27,6 +27,8 @@ Pod::Spec.new do |spec|
 
   spec.swift_versions = ["5.0"]
 
+  spec.static_framework = true
+
   spec.source_files = "PointHomeUnityBridge/**/*.{h,m,mm,swift}"
   spec.public_header_files = "PointHomeUnityBridge/**/*.h"
 
