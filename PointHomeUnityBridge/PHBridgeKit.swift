@@ -6,9 +6,18 @@
 import Foundation
 import AvatyePointHome
 import UIKit
+
+#if canImport(AppLovinSDK)
 import AppLovinSDK
+#endif
+
+#if canImport(PAGAdSDK)
 import PAGAdSDK
+#endif
+
+#if canImport(VungleAdsSDK)
 import VungleAdsSDK
+#endif
 
 @objc public class PHBridgeKit: NSObject, AvatyePHDelegate {
     
@@ -145,6 +154,7 @@ import VungleAdsSDK
     
     // 미디에이션 초기화 추가
     @objc public static func initializeApplovin(_ params: NSString) {
+#if canImport(AppLovinSDK)
         print("PHBridgeKit.swift -> initializeAppLovin::    \(params)")
                    
            guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
@@ -165,9 +175,11 @@ import VungleAdsSDK
         ALSdk.shared().initialize(with: initConfig) { sdkConfig in
             print("PHBridgeKit.swift -> initializeAppLovin::{ AppLovin SDK initialized with success: \(sdkConfig) }")
         }
+#endif
     }
 
     @objc public static func initializePangle(_ params: NSString) {
+#if canImport(PAGAdSDK)
         print("PHBridgeKit.swift -> initializePangle::    \(params)")
                    
            guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
@@ -190,9 +202,11 @@ import VungleAdsSDK
                 print("PHBridgeKit.swift -> initializePangle:: { PAG Error: \(error?.localizedDescription ?? "Unknown error }")")
             }
         }
+#endif
     }
 
     @objc public static func initializeVungle(_ params: NSString) {
+#if canImport(VungleAdsSDK)
         print("PHBridgeKit.swift -> initializeVungle::    \(params)")
                    
            guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
@@ -220,6 +234,7 @@ import VungleAdsSDK
         } else {
             print("PHBridgeKit.swift -> initializeVungle:: { Vungle SDK is Not initialized }")
         }
+#endif
     }
 
 }
