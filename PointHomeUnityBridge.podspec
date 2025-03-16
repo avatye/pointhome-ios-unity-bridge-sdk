@@ -39,26 +39,18 @@ Pod::Spec.new do |spec|
     spec.dependency("VungleAds", vungle_ads_version)
     spec.dependency("FBAudienceNetwork", fb_audience_network_version)
 
-    spec.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}", "PointHomeUnityBridge/Adapters/AppLovin/**/*.{h,m}"
+    spec.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/AppLovin/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Pangle/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Unity/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Vungle/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Facebook/*.{h,m,mm,swift}"
 
-
-  # 서브스펙 { Total }
-  spec.subspec 'PH' do |ph|
-    ph.dependency("AvatyePointHome", avatye_point_home_version)
-    ph.dependency("AppLovinSDK", app_lovin_version)
-    ph.dependency("Ads-Global", ads_pangle_version)
-    ph.dependency("UnityAds", unity_ads_version)
-    ph.dependency("VungleAds", vungle_ads_version)
-    ph.dependency("FBAudienceNetwork", fb_audience_network_version)
-
-   # ph.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}", "PointHomeUnityBridge/**/*.{h,m,mm,swift}"
-
-  end
 
   # 서브스펙 { Core 모듈 }
   spec.subspec 'Core' do |core|
     core.dependency 'AvatyePointHome', avatye_point_home_version
-    # core.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}"
+    core.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}"
   end
 
    # 서브스펙 { Ads 모듈 }
@@ -69,35 +61,44 @@ Pod::Spec.new do |spec|
     ads.dependency 'VungleAds', vungle_ads_version
     ads.dependency 'FBAudienceNetwork', fb_audience_network_version
 
-    # ads.source_files = "PointHomeUnityBridge/**/*.{h,m,mm,swift}"
-
+    ads.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+   "PointHomeUnityBridge/AppLovin/*.{h,m,mm,swift}",
+   "PointHomeUnityBridge/Pangle/*.{h,m,mm,swift}",
+   "PointHomeUnityBridge/Unity/*.{h,m,mm,swift}",
+   "PointHomeUnityBridge/Vungle/*.{h,m,mm,swift}",
+   "PointHomeUnityBridge/Facebook/*.{h,m,mm,swift}"
   end
 
    # 서브스펙 { 각 광고 SDK 모듈 }
   spec.subspec 'AppLovin' do |app_lovin|
     app_lovin.dependency 'AppLovinSDK', app_lovin_version
-    # app_lovin.source_files = "PointHomeUnityBridge/Adapters/AppLovin/*.{h,m}"
+    app_lovin.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/AppLovin/*.{h,m,mm,swift}"
   end
 
  spec.subspec 'Pangle' do |pangle|
     pangle.dependency 'Ads-Global', ads_pangle_version
-    # pangle.source_files = "PointHomeUnityBridge/Adapters/Pangle/*.{h,m}"
+    pangle.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Pangle/*.{h,m,mm,swift}"
   end
 
   spec.subspec 'Unity' do |unity|
     unity.dependency 'UnityAds', unity_ads_version
-    # unity.source_files = "PointHomeUnityBridge/Adapters/Unity/*.{h,m}"
+    unity.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Unity/*.{h,m,mm,swift}"
   end
 
   spec.subspec 'Vungle' do |vungle|
     vungle.dependency 'VungleAds', vungle_ads_version
-    # vungle.source_files = "PointHomeUnityBridge/Adapters/Vungle/*.{h,m}"
+    vungle.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Vungle/*.{h,m,mm,swift}"
   end
 
 
   spec.subspec 'Facebook' do |facebook|
     facebook.dependency 'FBAudienceNetwork', fb_audience_network_version
-    # facebook.source_files = "PointHomeUnityBridge/Adapters/Facebook/*.{h,m}"
+    facebook.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
+"PointHomeUnityBridge/Facebook/*.{h,m,mm,swift}"
   end
 
 end
