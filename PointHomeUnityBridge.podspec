@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.0.3"
+  sdk_version = "1.8.2.0"
+
   avatye_point_home_version = "1.8.2"
   app_lovin_version = "13.0.1"
   ads_pangle_version = "6.2.0.5"
   unity_ads_version = "4.12.5"
   vungle_ads_version = "7.4.1"
   fb_audience_network_version = "6.14.0"
-
 
   spec.name = "PointHomeUnityBridge"
   spec.version = sdk_version
