@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.8.2.0"
+  sdk_version = "1.8.2.1"
 
   avatye_point_home_version = "1.8.2"
   app_lovin_version = "13.0.1"
@@ -32,12 +32,12 @@ Pod::Spec.new do |spec|
 
   # spec.public_header_files = "PointHomeUnityBridge//**/*.h"
 
-    spec.dependency("AvatyePointHome", avatye_point_home_version)
-    spec.dependency("AppLovinSDK", app_lovin_version)
-    spec.dependency("Ads-Global", ads_pangle_version)
-    spec.dependency("UnityAds", unity_ads_version)
-    spec.dependency("VungleAds", vungle_ads_version)
-    spec.dependency("FBAudienceNetwork", fb_audience_network_version)
+    #spec.dependency("AvatyePointHome", avatye_point_home_version)
+    #spec.dependency("AppLovinSDK", app_lovin_version)
+    #spec.dependency("Ads-Global", ads_pangle_version)
+    #spec.dependency("UnityAds", unity_ads_version)
+    #spec.dependency("VungleAds", vungle_ads_version)
+    #spec.dependency("FBAudienceNetwork", fb_audience_network_version)
 
     spec.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}",
 "PointHomeUnityBridge/AppLovin/*.{h,m,mm,swift}",

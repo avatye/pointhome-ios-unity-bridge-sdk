@@ -15,6 +15,4 @@ target 'PointHomeUnityBridge' do
   pod 'UnityAds', '4.12.5'
   pod 'VungleAds', '7.4.1'
   pod 'FBAudienceNetwork', '6.14.0'
-  pod 'CaulySDK', :git => 'https://github.com/cauly/CaulySDK_iOS.git', :tag => '3.1.22'
-   
 end
