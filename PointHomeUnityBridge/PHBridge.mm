@@ -49,6 +49,11 @@ extern "C" {
        [PHBridgeKit open];
    }
 
+    void ClosePH() {
+        NSLog(@"ClosePH called");
+        [PHBridgeKit close];
+    }
+
 
     void InitializeApplovin(const char* jsonParams) {
         NSString* params = [NSString stringWithUTF8String:jsonParams];

@@ -25,6 +25,8 @@ import VungleAdsSDK
     
     static let shared = PHBridgeKit()
     
+    private static var openType: String? = nil
+    
     
     @objc public static func initialize(_ params: NSString, initListener: @escaping(_ success: NSNumber, _ message: NSString) -> Void) {
        print("PHBridgeKit.swift -> initialize::   \(params)")
@@ -67,6 +69,7 @@ import VungleAdsSDK
                print("PHBridgeKit.swift -> makeBuilder::Error: There is no json value!!")
                return
            }
+         openType = jsonObject["openType"] as? String
          let userKey: String? = {
              if let key = jsonObject["userKey"] as? String, !key.isEmpty {
                  return key
@@ -92,9 +95,7 @@ import VungleAdsSDK
                 print("PHBridgeKit.swift => Error: rootViewController is nil")
                 return
             }
-        
-          
-           
+                             
            pointHomeService = AvatyePHService(
                rootViewController: rootVC,
                appId: appId,
@@ -104,7 +105,6 @@ import VungleAdsSDK
                fullScreen: fullScreen
            )
            pointHomeService?.delegate = PHBridgeKit.shared
-           pointHomeService?.setCashButton()
            
            print("PHBridgeKit.swift => makeBuilder: PointHomeService makeBuilder")
    }
@@ -117,17 +117,39 @@ import VungleAdsSDK
            return
        }
        
-       service.openPointHome { result in
-           switch result {
-           case .success(let t):
-               print("success \(t)")
-           case .failure(let error):
-               print("failure \(error)")
-           @unknown default:
-               print("Unknown result")
+       if (openType == "float") {
+           pointHomeService?.setCashButton()
+       } else if(openType == "bottom"){
+           service.openPointHome { result in
+               switch result {
+               case .success(let t):
+                   print("PHBridgeKit => open::success \(t)")
+               case .failure(let error):
+                   print("PHBridgeKit => open::failure \(error)")
+               @unknown default:
+                   print("PHBridgeKit => open::Unknown result")
+               }
            }
+       } else {
+           print("PHBridgeKit => open:: type is nothing")
        }
    }
+    
+    @objc public static func close() {
+        print("PHBridgeKit.swift -> close")
+        guard let service = pointHomeService else {
+            print("Error: PointHomeService is not initialized")
+            return
+        }
+        
+        if (openType == "bottom") {
+            service.closePointHome {
+                print("PHBridgeKit => closePointHome")
+            }
+        } else {
+            print("PHBridgeKit => close::The close function can only use the bottom type!! ")
+        }
+    }
     
     
     // 포인트홈 system Event 이벤트.

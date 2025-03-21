@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.8.2.0"
+  sdk_version = "1.8.2.1"
 
   avatye_point_home_version = "1.8.2"
   app_lovin_version = "13.0.1"
