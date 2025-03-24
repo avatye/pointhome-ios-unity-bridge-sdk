@@ -26,6 +26,8 @@ import VungleAdsSDK
     static let shared = PHBridgeKit()
     
     private static var openType: String? = nil
+    private static var buttonPositionX: CGFloat = -1
+    private static var buttonPositionY: CGFloat = -1
     
     
     @objc public static func initialize(_ params: NSString, initListener: @escaping(_ success: NSNumber, _ message: NSString) -> Void) {
@@ -69,14 +71,19 @@ import VungleAdsSDK
                print("PHBridgeKit.swift -> makeBuilder::Error: There is no json value!!")
                return
            }
-         openType = jsonObject["openType"] as? String
+         
          let userKey: String? = {
              if let key = jsonObject["userKey"] as? String, !key.isEmpty {
                  return key
              }
              return nil
          }()
+        
         print("PHBridgeKit.swift -> userKey::   \(userKey ?? "nil")")
+        openType = jsonObject["openType"] as? String
+        buttonPositionX = jsonObject["buttonPositionX"] as? CGFloat ?? -1
+        buttonPositionY = jsonObject["buttonPositionY"] as? CGFloat ?? -1
+           
            
         // ios 13
 //           guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
@@ -116,9 +123,14 @@ import VungleAdsSDK
            print("Error: PointHomeService is not initialized")
            return
        }
+       guard let phOpenType = openType else {
+           print("Error: openType is not initialized")
+           return
+       }
+       
        
        if (openType == "float") {
-           pointHomeService?.setCashButton()
+           pointHomeService?.setCashButton(bottom: buttonPositionX, trailing: buttonPositionY)
        } else if(openType == "bottom"){
            service.openPointHome { result in
                switch result {

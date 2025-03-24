@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65A02DD69EB78FD823D82AF5 /* Pods_PointHomeUnityBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E58F22D30FA6FB35866B20 /* Pods_PointHomeUnityBridge.framework */; };
+		85CF9D6851AA1CDC03CAE30F /* Pods_PointHomeUnityBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE22615A362F05C33C03C98B /* Pods_PointHomeUnityBridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A999AB0EEFDC2C60B9CCE7A /* Pods-PointHomeUnityBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointHomeUnityBridge.release.xcconfig"; path = "Target Support Files/Pods-PointHomeUnityBridge/Pods-PointHomeUnityBridge.release.xcconfig"; sourceTree = "<group>"; };
-		41A94314FDD4A5FBC7457BD7 /* Pods-PointHomeUnityBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointHomeUnityBridge.debug.xcconfig"; path = "Target Support Files/Pods-PointHomeUnityBridge/Pods-PointHomeUnityBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		110E6392C33BB51A3CE95359 /* Pods-PointHomeUnityBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointHomeUnityBridge.release.xcconfig"; path = "Target Support Files/Pods-PointHomeUnityBridge/Pods-PointHomeUnityBridge.release.xcconfig"; sourceTree = "<group>"; };
 		719D94DF2D7AC62800B68591 /* PointHomeUnityBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PointHomeUnityBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4E58F22D30FA6FB35866B20 /* Pods_PointHomeUnityBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointHomeUnityBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8CAFF387679548E582A8061 /* Pods-PointHomeUnityBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointHomeUnityBridge.debug.xcconfig"; path = "Target Support Files/Pods-PointHomeUnityBridge/Pods-PointHomeUnityBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		EE22615A362F05C33C03C98B /* Pods_PointHomeUnityBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointHomeUnityBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,20 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A02DD69EB78FD823D82AF5 /* Pods_PointHomeUnityBridge.framework in Frameworks */,
+				85CF9D6851AA1CDC03CAE30F /* Pods_PointHomeUnityBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35FDE63084D24D70D9C0B944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE22615A362F05C33C03C98B /* Pods_PointHomeUnityBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		719D94D52D7AC62800B68591 = {
 			isa = PBXGroup;
 			children = (
 				719D94E12D7AC62800B68591 /* PointHomeUnityBridge */,
 				719D94E02D7AC62800B68591 /* Products */,
 				B48232ABC94876A55823B6EC /* Pods */,
-				B509B93B2E5152E593EFEA71 /* Frameworks */,
+				35FDE63084D24D70D9C0B944 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,18 +79,10 @@
 		B48232ABC94876A55823B6EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				41A94314FDD4A5FBC7457BD7 /* Pods-PointHomeUnityBridge.debug.xcconfig */,
-				2A999AB0EEFDC2C60B9CCE7A /* Pods-PointHomeUnityBridge.release.xcconfig */,
+				A8CAFF387679548E582A8061 /* Pods-PointHomeUnityBridge.debug.xcconfig */,
+				110E6392C33BB51A3CE95359 /* Pods-PointHomeUnityBridge.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B509B93B2E5152E593EFEA71 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C4E58F22D30FA6FB35866B20 /* Pods_PointHomeUnityBridge.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,12 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 719D94E52D7AC62800B68591 /* Build configuration list for PBXNativeTarget "PointHomeUnityBridge" */;
 			buildPhases = (
-				1770DD6978E41B06854571BC /* [CP] Check Pods Manifest.lock */,
+				6CCE001ACE90D0D6CB205F99 /* [CP] Check Pods Manifest.lock */,
 				719D94DA2D7AC62800B68591 /* Headers */,
 				719D94DB2D7AC62800B68591 /* Sources */,
 				719D94DC2D7AC62800B68591 /* Frameworks */,
 				719D94DD2D7AC62800B68591 /* Resources */,
-				A9DEADDE78D9E4704F113555 /* [CP] Copy Pods Resources */,
+				94A4E247211D62C0511B5B6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,7 +165,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1770DD6978E41B06854571BC /* [CP] Check Pods Manifest.lock */ = {
+		6CCE001ACE90D0D6CB205F99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,7 +187,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A9DEADDE78D9E4704F113555 /* [CP] Copy Pods Resources */ = {
+		94A4E247211D62C0511B5B6E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,7 +219,7 @@
 /* Begin XCBuildConfiguration section */
 		719D94E62D7AC62800B68591 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41A94314FDD4A5FBC7457BD7 /* Pods-PointHomeUnityBridge.debug.xcconfig */;
+			baseConfigurationReference = A8CAFF387679548E582A8061 /* Pods-PointHomeUnityBridge.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -254,7 +254,7 @@
 		};
 		719D94E72D7AC62800B68591 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A999AB0EEFDC2C60B9CCE7A /* Pods-PointHomeUnityBridge.release.xcconfig */;
+			baseConfigurationReference = 110E6392C33BB51A3CE95359 /* Pods-PointHomeUnityBridge.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

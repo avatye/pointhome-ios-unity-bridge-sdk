@@ -9,7 +9,7 @@ target 'PointHomeUnityBridge' do
   use_frameworks!
 
   # Pods for PointHomeUnityBridge
-  pod 'AvatyePointHome', '1.8.2'
+  pod 'AvatyePointHome', '1.8.4'
   pod 'AppLovinSDK', '13.0.1'
   pod 'Ads-Global', '6.2.0.5'
   pod 'UnityAds', '4.12.5'
