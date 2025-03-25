@@ -1,79 +1,24 @@
 PODS:
   - AdPopcornSSP (2.9.3)
-  - Ads-Global (6.2.0.5):
-    - Ads-Global/BUAdSDK (= 6.2.0.5)
-  - Ads-Global/BUAdSDK (6.2.0.5):
-    - Ads-Global/Dep_Accurate
-  - Ads-Global/Dep_Accurate (6.2.0.5):
-    - BURelyFoundation_Global/Pangle (= 1.0.0.6)
-  - AppLovinSDK (13.0.1)
   - AvatyeAdCash (3.1.24):
     - AdPopcornSSP (~> 2.9.1)
   - AvatyePointHome (1.8.4):
     - AvatyeAdCash (~> 3.1.24)
-  - BURelyFoundation_Global/AFNetworking (1.0.0.6)
-  - BURelyFoundation_Global/APM (1.0.0.6)
-  - BURelyFoundation_Global/Foundation (1.0.0.6):
-    - BURelyFoundation_Global/NETWork
-  - BURelyFoundation_Global/Gecko (1.0.0.6):
-    - BURelyFoundation_Global/Foundation
-  - BURelyFoundation_Global/Header (1.0.0.6)
-  - BURelyFoundation_Global/NETWork (1.0.0.6):
-    - BURelyFoundation_Global/AFNetworking
-  - BURelyFoundation_Global/Pangle (1.0.0.6):
-    - BURelyFoundation_Global/AFNetworking
-    - BURelyFoundation_Global/APM
-    - BURelyFoundation_Global/Foundation
-    - BURelyFoundation_Global/Gecko
-    - BURelyFoundation_Global/Header
-    - BURelyFoundation_Global/NETWork
-    - BURelyFoundation_Global/SDWebImage
-    - BURelyFoundation_Global/YYModel
-    - BURelyFoundation_Global/ZFPlayer
-    - BURelyFoundation_Global/Zip
-  - BURelyFoundation_Global/SDWebImage (1.0.0.6):
-    - BURelyFoundation_Global/Foundation
-  - BURelyFoundation_Global/YYModel (1.0.0.6)
-  - BURelyFoundation_Global/ZFPlayer (1.0.0.6):
-    - BURelyFoundation_Global/Foundation
-    - BURelyFoundation_Global/Zip
-  - BURelyFoundation_Global/Zip (1.0.0.6):
-    - BURelyFoundation_Global/Foundation
-  - FBAudienceNetwork (6.14.0)
-  - UnityAds (4.12.5)
-  - VungleAds (7.4.1)
 
 DEPENDENCIES:
-  - Ads-Global (= 6.2.0.5)
-  - AppLovinSDK (= 13.0.1)
   - AvatyePointHome (= 1.8.4)
-  - FBAudienceNetwork (= 6.14.0)
-  - UnityAds (= 4.12.5)
-  - VungleAds (= 7.4.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdPopcornSSP
-    - Ads-Global
-    - AppLovinSDK
     - AvatyeAdCash
     - AvatyePointHome
-    - BURelyFoundation_Global
-    - FBAudienceNetwork
-    - UnityAds
-    - VungleAds
 
 SPEC CHECKSUMS:
   AdPopcornSSP: 1c428770117349687464548404de64e43198164f
-  Ads-Global: 7da585d796df191827a52c1ea4a754e0425d8e11
-  AppLovinSDK: fdae6a4361c9c9b09f8d7d18ede792368221d987
   AvatyeAdCash: cc993934ded1610f4b3d64d93f53c042075f7cca
   AvatyePointHome: 2c94fd75049d9899ab1e10f8e7d4ccb6aa94581f
-  BURelyFoundation_Global: 17faee76affe097bd20b422fe829f9f90ed10e25
-  FBAudienceNetwork: 4d6223a9a88a22e9dca8c9e6c1829a8745b86228
-  UnityAds: a4036ed911b4df2227d8137f4f777fcb86c4a2df
-  VungleAds: 97140121d0b909891eb217d1c102a194601da607
 
-PODFILE CHECKSUM: 59d0ce9f7953be930a433290926d2b05ac6b8e8d
+PODFILE CHECKSUM: d8d5dd02ac420591b857cea131a50eba4747fc0a
 
 COCOAPODS: 1.16.2
