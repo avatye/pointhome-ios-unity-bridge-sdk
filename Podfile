@@ -10,9 +10,9 @@ target 'PointHomeUnityBridge' do
 
   # Pods for PointHomeUnityBridge
   pod 'AvatyePointHome', '1.8.4'
-  pod 'AppLovinSDK', '13.0.1'
-  pod 'Ads-Global', '6.2.0.5'
-  pod 'UnityAds', '4.12.5'
-  pod 'VungleAds', '7.4.1'
-  pod 'FBAudienceNetwork', '6.14.0'
+  # pod 'AppLovinSDK', '13.0.1'
+  # pod 'Ads-Global', '6.2.0.5'
+  # pod 'UnityAds', '4.12.5'
+  # pod 'VungleAds', '7.4.1'
+  # pod 'FBAudienceNetwork', '6.14.0'
 end

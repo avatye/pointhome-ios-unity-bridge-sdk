@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85CF9D6851AA1CDC03CAE30F /* Pods_PointHomeUnityBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE22615A362F05C33C03C98B /* Pods_PointHomeUnityBridge.framework */; };
+		7192D35B2D929FC00066BCE9 /* Pods_PointHomeUnityBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE22615A362F05C33C03C98B /* Pods_PointHomeUnityBridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85CF9D6851AA1CDC03CAE30F /* Pods_PointHomeUnityBridge.framework in Frameworks */,
+				7192D35B2D929FC00066BCE9 /* Pods_PointHomeUnityBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -123,11 +123,7 @@ import VungleAdsSDK
            print("Error: PointHomeService is not initialized")
            return
        }
-       guard let phOpenType = openType else {
-           print("Error: openType is not initialized")
-           return
-       }
-       
+
        
        if (openType == "float") {
            pointHomeService?.setCashButton(bottom: buttonPositionX, trailing: buttonPositionY)
