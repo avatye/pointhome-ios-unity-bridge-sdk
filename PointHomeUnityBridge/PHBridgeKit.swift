@@ -7,8 +7,6 @@ import Foundation
 import AvatyePointHome
 import UIKit
 
-
-
 @objc public class PHBridgeKit: NSObject, AvatyePHDelegate {
     
     private static var pointHomeService: AvatyePHService? = nil
@@ -102,6 +100,8 @@ import UIKit
                fullScreen: fullScreen
            )
            pointHomeService?.delegate = PHBridgeKit.shared
+        
+    
            
            print("PHBridgeKit.swift => makeBuilder: PointHomeService makeBuilder")
    }
@@ -174,15 +174,18 @@ import UIKit
     
     // 미디에이션 초기화 추가
     @objc public static func initializeApplovin(_ params: NSString) {
+        print("PHBridgeKit.swift => initializeApplovin { params: \(params) }")
+//        AvatyePH.initializeAppLovin(params as String)        
     }
 
     @objc public static func initializePangle(_ params: NSString) {
-
+        print("PHBridgeKit.swift => initializePangle { params: \(params) }")
+//        AvatyePH.initializePangle(params as String)
     }
 
     @objc public static func initializeVungle(_ params: NSString) {
-        
-
+        print("PHBridgeKit.swift => initializeVungle { params: \(params) }")
+//        AvatyePH.initializeVungle(params as String)
     }
 
 }

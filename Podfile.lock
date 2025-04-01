@@ -1,17 +1,12 @@
 PODS:
   - AdPopcornSSP (2.9.4)
-  - AvatyeAdCash (3.1.24-U1):
-    - AvatyeAdCash/Core (= 3.1.24-U1)
-    - AvatyeAdCash/Mezzo (= 3.1.24-U1)
-  - AvatyeAdCash/Core (3.1.24-U1):
+  - AvatyeAdCash (3.1.24):
     - AdPopcornSSP (~> 2.9.1)
-  - AvatyeAdCash/Mezzo (3.1.24-U1)
-  - AvatyePointHome (1.8.4-U1):
-    - AvatyeAdCash (~> 3.1.24-U1)
+  - AvatyePointHome (1.8.4):
+    - AvatyeAdCash (~> 3.1.24)
 
 DEPENDENCIES:
-  - AvatyeAdCash (= 3.1.24-U1)
-  - AvatyePointHome (= 1.8.4-U1)
+  - AvatyePointHome (= 1.8.4)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -21,9 +16,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AdPopcornSSP: 4986651b4a444810313a846299b90aca3044e3a1
-  AvatyeAdCash: 13e688d5a850ce26d66593fb8d3ca020d5c3c276
-  AvatyePointHome: 299ba47fde469b874e37f19c012f88e097d727b8
+  AvatyeAdCash: cc993934ded1610f4b3d64d93f53c042075f7cca
+  AvatyePointHome: 2c94fd75049d9899ab1e10f8e7d4ccb6aa94581f
 
-PODFILE CHECKSUM: 906fdeac9b11b6fbb58f020c41db5c4794ad60ac
+PODFILE CHECKSUM: d8d5dd02ac420591b857cea131a50eba4747fc0a
 
 COCOAPODS: 1.16.2

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.8.4.4"
+  sdk_version = "1.8.4.4-beta.0"
 
   avatye_point_home_version = "1.8.4-U1"
   avatye_adcash_version = "3.1.24-U1"
