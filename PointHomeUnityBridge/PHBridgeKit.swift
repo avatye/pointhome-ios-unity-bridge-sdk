@@ -7,17 +7,7 @@ import Foundation
 import AvatyePointHome
 import UIKit
 
-#if canImport(AppLovinSDK)
-import AppLovinSDK
-#endif
 
-#if canImport(PAGAdSDK)
-import PAGAdSDK
-#endif
-
-#if canImport(VungleAdsSDK)
-import VungleAdsSDK
-#endif
 
 @objc public class PHBridgeKit: NSObject, AvatyePHDelegate {
     
@@ -184,87 +174,15 @@ import VungleAdsSDK
     
     // 미디에이션 초기화 추가
     @objc public static func initializeApplovin(_ params: NSString) {
-#if canImport(AppLovinSDK)
-        print("PHBridgeKit.swift -> initializeAppLovin::    \(params)")
-                   
-           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
-                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
-               print("PHBridgeKit.swift => initializeAppLovin -> Error: Failed to parse JSON")
-               return
-           }
-           
-           guard let applovinKey = jsonObject["applovinKey"] as? String else {
-               print("PHBridgeKit.swift -> initializeAppLovin::Error: There is no json value!!")
-               return
-           }
-        
-        
-        let initConfig = ALSdkInitializationConfiguration(sdkKey: applovinKey) { builder in
-            builder.mediationProvider = ALMediationProviderMAX
-        }
-        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
-            print("PHBridgeKit.swift -> initializeAppLovin::{ AppLovin SDK initialized with success: \(sdkConfig) }")
-        }
-#endif
     }
 
     @objc public static func initializePangle(_ params: NSString) {
-#if canImport(PAGAdSDK)
-        print("PHBridgeKit.swift -> initializePangle::    \(params)")
-                   
-           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
-                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
-               print("PHBridgeKit.swift => initializePangle -> Error: Failed to parse JSON")
-               return
-           }
-           
-           guard let pangleKey = jsonObject["pangleKey"] as? String else {
-               print("PHBridgeKit.swift -> initializePangle::Error: There is no json value!!")
-               return
-           }
-        
-        let config = PAGConfig.share()
-        config.appID = pangleKey
-        PAGSdk.start(with: config) { pSuccess, error in
-            if pSuccess {
-                print("PHBridgeKit.swift -> initializePangle:: { PAG Success }")
-            } else {
-                print("PHBridgeKit.swift -> initializePangle:: { PAG Error: \(error?.localizedDescription ?? "Unknown error }")")
-            }
-        }
-#endif
+
     }
 
     @objc public static func initializeVungle(_ params: NSString) {
-#if canImport(VungleAdsSDK)
-        print("PHBridgeKit.swift -> initializeVungle::    \(params)")
-                   
-           guard let jsonData = params.data(using: String.Encoding.utf8.rawValue),
-                 let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
-               print("PHBridgeKit.swift => initializeVungle -> Error: Failed to parse JSON")
-               return
-           }
-           
-           guard let vungleKey = jsonObject["vungleKey"] as? String else {
-               print("PHBridgeKit.swift -> initializeVungle::Error: There is no json value!!")
-               return
-           }
         
-        
-        VungleAds.initWithAppId(vungleKey) { error in
-            if let error = error {
-                print("PHBridgeKit.swift -> initializeVungle:: { Vungle initialization failed with error: \(error.localizedDescription) }")
-            } else {
-                print("PHBridgeKit.swift -> initializeVungle:: { Vungle initialization success }")
-            }
-        }
-        
-        if VungleAds.isInitialized() {
-            print("PHBridgeKit.swift -> initializeVungle:: { Vungle SDK is initialized } ")
-        } else {
-            print("PHBridgeKit.swift -> initializeVungle:: { Vungle SDK is Not initialized }")
-        }
-#endif
+
     }
 
 }

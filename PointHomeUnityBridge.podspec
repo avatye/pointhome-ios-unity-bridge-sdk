@@ -1,8 +1,9 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.8.4.3"
+  sdk_version = "1.8.4.4"
 
-  avatye_point_home_version = "1.8.4"
+  avatye_point_home_version = "1.8.4-U1"
+  avatye_adcash_version = "3.1.24-U1"
 
   spec.name = "PointHomeUnityBridge"
   spec.version = sdk_version
@@ -26,7 +27,8 @@ Pod::Spec.new do |spec|
 
   # spec.public_header_files = "PointHomeUnityBridge//**/*.h"
 
-    spec.dependency("AvatyePointHome", avatye_point_home_version)
+  spec.dependency("AvatyePointHome", "~> #{avatye_point_home_version}")
+  spec.dependency("AvatyeAdCash", "~> #{avatye_adcash_version}")
 
     spec.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}"
 
