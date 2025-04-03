@@ -9,5 +9,5 @@ target 'PointHomeUnityBridge' do
   use_frameworks!
 
   # Pods for PointHomeUnityBridge
-  pod 'AvatyePointHome', '1.8.5'
+  pod 'AvatyePointHome', '1.8.5.0'
 end
