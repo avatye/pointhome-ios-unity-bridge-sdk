@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  sdk_version = "1.8.5.2"
+  sdk_version = "1.8.5.3"
 
   spec.name = "PointHomeUnityBridge"
   spec.version = sdk_version
@@ -19,14 +19,13 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "13.0"
 
   spec.swift_versions = ["5.0"]
-  spec.static_framework = true
-
-
-  # spec.public_header_files = "PointHomeUnityBridge//**/*.h"
 
    spec.dependency 'AvatyePointHome', '1.8.5.0'
 
    spec.source_files = "PointHomeUnityBridge/*.{h,m,mm,swift}"
+
+  # spec.static_framework = true
+  # spec.public_header_files = "PointHomeUnityBridge//**/*.h"
 
 
 
