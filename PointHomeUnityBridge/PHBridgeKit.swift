@@ -175,17 +175,18 @@ import UIKit
     // 미디에이션 초기화 추가
     @objc public static func initializeApplovin(_ params: NSString) {
         print("PHBridgeKit.swift => initializeApplovin { params: \(params) }")
-//        AvatyePH.initializeAppLovin(params as String)        
+        AvatyePH.initializeAppLovin(params as String)        
     }
 
     @objc public static func initializePangle(_ params: NSString) {
         print("PHBridgeKit.swift => initializePangle { params: \(params) }")
-//        AvatyePH.initializePangle(params as String)
+        AvatyePH.initializePangle(params as String)
+        
     }
 
     @objc public static func initializeVungle(_ params: NSString) {
         print("PHBridgeKit.swift => initializeVungle { params: \(params) }")
-//        AvatyePH.initializeVungle(params as String)
+        AvatyePH.initializeVungle(params as String)
     }
 
 }
